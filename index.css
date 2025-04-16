@@ -1,0 +1,28 @@
+h1 {
+  color: whitesmoke;
+  font-size: 50px;
+  display: inline-block;
+  font-weight: 300;
+  margin: 32px 32px 0 32px;
+  padding: 10px;
+}
+
+p {
+  color: beige;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 32px 32px 0 32px;
+  font-weight: 100;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+.about {
+  width: 40%;
+  min-width: 800px;
+  margin: 100px 0 100px 200px;
+}
