@@ -18,11 +18,37 @@ p {
 body {
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-color:black;
 }
 
 .about {
   width: 40%;
   min-width: 800px;
-  margin: 100px 0 100px 200px;
+  margin: 100px 0 100px 32px;
+}
+
+
+.primary-btn {
+  color:burlywood; 
+  font-size: 20px;
+}
+
+.primary-btn:hover {
+  color:coral;
+  background-color: yellow;
+}
+
+.primary-btn:visited {
+  color:blueviolet;
+}
+
+.primary-btn:active {
+  color: white;
+  background-color: green;
+  border: 4px solid black;
+}
+
+::selection {
+  color:greenyellow;
+  background-color:darkblue;
 }
