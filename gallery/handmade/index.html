@@ -1,17 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <title>Acrylic Art</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <title>Acrylic Art</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: system-ui, sans-serif;
+      background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    }
+
+    .carousel {
+      width: min(90vw, 700px);
+      overflow-x: auto;
+      display: flex;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 1rem;
+
+      scrollbar-width: none;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      border-radius: 1rem;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+    }
+
+    .slide figure {
+      margin: 0;
+    }
+
+    .slide img {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+    figcaption {
+    padding: .6rem 1rem 1rem;
+    text-align: center;
+}
+
+    figcaption h2 {
+    margin: 0;
+    font-family: "Cormorant", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+    figcaption p {
+    margin-top: .3rem;
+    font-size: .9rem;
+    color: #666;
+}
+    .nav {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .nav a {
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 0.25rem;
+      border-radius: 50%;
+      background: #777;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    .nav a:hover {
+      background: #222;
+    }
+  </style>
 </head>
 
 <body>
+    <header class="navbar">
+        <nav class="links">
+            <ul>
+                <li><a class="active" href="#work">Work</a></li>
+                <li><a href="../../index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+
+  <section class="carousel" aria-label="Image carousel">
+
+    <article class="slide" id="slide-1">
+      <figure>
+        <img src="images/hogwarts.jpg" alt="Hogwarts acrylic painting">
+        <figcaption>
+          <h2>Hogwarts</h2>
+          <p>
+            Acrylic on canvas inspired by the magical world of Harry Potter.
+          </p>
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="slide" id="slide-2">
+      <figure>
+        <img src="images/on-white-ii.jpg" alt="On White II recreation">
+        <figcaption>
+          <h2>On White II</h2>
+          <p>
+            An acrylic recreation of Wassily Kandinsky's iconic abstract work.
+          </p>
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="slide" id="slide-3">
+      <figure>
+        <img src="images/waves.jpg" alt="The Great Wave painting">
+        <figcaption>
+          <h2>The Great Wave</h2>
+          <p>
+            Acrylic interpretation of Hokusai's famous woodblock print.
+          </p>
+        </figcaption>
+      </figure>
+    </article>
+
+  </section>
+
+  <nav class="nav" aria-label="Carousel navigation">
+    <a href="#slide-1">Slide 1</a>
+    <a href="#slide-2">Slide 2</a>
+    <a href="#slide-3">Slide 3</a>
+  </nav>
+
+</main>
+
+</body>
+</html>
+
+  <!-- <body>
     <header class="navbar">
         <nav class="links">
             <ul>
@@ -21,8 +178,8 @@
             </ul>
         </nav>
     </header>
-    <main class="gallery-layout">
-
+    <main class="gallery-layout"> -->
+  <!-- 
         <nav class="sidebar">
             <h2>Acrylic Works</h2>
 
@@ -35,28 +192,25 @@
 
             <figure class="artwork default">
                 <img src="images/hogwarts.jpg" alt="Artwork Hogwarts">
-                <!-- <figcaption>Hogwarts ferry</figcaption> -->
             </figure>
 
             <figure id="img-1" class="artwork">
                 <img src="images/hogwarts.jpg" alt="Artwork Hogwarts">
-                <!-- <figcaption>Hogwarts ferry</figcaption> -->
+            
             </figure>
 
             <figure id="img-2" class="artwork">
                 <img src="images/on-white-ii.jpg" alt="Artwork White">
-                <!-- <figcaption>On White II</figcaption> -->
+                
             </figure>
 
             <figure id="img-3" class="artwork">
                 <img src="images/waves.jpg" alt="Artwork Waves">
-                <!-- <figcaption>Waves</figcaption> -->
             </figure>
 
         </section>
 
     </main>
 
-</body>
-
+</body> -->
 </html>
